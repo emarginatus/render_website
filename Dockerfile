@@ -8,7 +8,7 @@ RUN apt-get update \
   &&  apt-get -y --no-install-recommends install \
     libgdal-dev \
     libproj-dev \
-  && Rscript -e "install.packages('sp', repos = 'http://cran.rstudio.com')"
+  && Rscript -e "install.packages('rgdal', repos = 'http://cran.rstudio.com')"
 
 ## install rgeos
 RUN Rscript -e "install.packages('rgeos', repos = 'http://cran.rstudio.com')"
