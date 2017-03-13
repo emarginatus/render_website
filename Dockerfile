@@ -27,3 +27,8 @@ RUN Rscript -e "devtools::install_github('rstudio/leaflet')"
 
 ## install ggvis
 RUN Rscript -e "install.packages('ggvis', repos = 'http://cran.rstudio.com')"
+
+## install curl
+RUN apt-get update \
+  && apt-get -y --no-install-recommends install \
+    curl
