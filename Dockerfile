@@ -32,3 +32,10 @@ RUN Rscript -e "install.packages('ggvis', repos = 'http://cran.rstudio.com')"
 RUN apt-get update \
   && apt-get -y --no-install-recommends install \
     curl
+## add extra fonts
+RUN mkdir ~/.fonts \
+  && cd ~/.fonts \
+  && wget http://download.damieng.com/fonts/redistributed/DroidFamily.zip \
+  && unzip DroidFamily.zip \
+  && rm DroidFamily.zip \
+  && wget https://github.com/stv0g/unicode-emoji/raw/master/symbola/Symbola.ttf
