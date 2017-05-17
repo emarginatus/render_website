@@ -42,3 +42,15 @@ RUN mkdir ~/.fonts \
   && unzip DroidFamily.zip \
   && rm DroidFamily.zip \
   && wget https://github.com/stv0g/unicode-emoji/raw/master/symbola/Symbola.ttf
+
+## install ggplot2
+RUN Rscript -e "install.packages('ggplot2', repos = 'http://cran.rstudio.com')"
+
+## install tibble
+RUN Rscript -e "install.packages('tibble', repos = 'http://cran.rstudio.com')"
+
+## install tidyr
+RUN Rscript -e "install.packages('tidyr', repos = 'http://cran.rstudio.com')"
+
+## install qrcode
+RUN Rscript -e "install.packages('qrcode', repos = 'http://cran.rstudio.com')"
