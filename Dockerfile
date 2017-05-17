@@ -49,6 +49,9 @@ RUN Rscript -e "install.packages('ggplot2', repos = 'http://cran.rstudio.com')"
 ## install tibble
 RUN Rscript -e "install.packages('tibble', repos = 'http://cran.rstudio.com')"
 
+## install dplyr
+RUN Rscript -e "install.packages('dplyr', repos = 'http://cran.rstudio.com')"
+
 ## install tidyr
 RUN Rscript -e "install.packages('tidyr', repos = 'http://cran.rstudio.com')"
 
