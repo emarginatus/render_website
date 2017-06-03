@@ -57,3 +57,6 @@ RUN Rscript -e "install.packages('tidyr', repos = 'http://cran.rstudio.com')"
 
 ## install qrcode
 RUN Rscript -e "install.packages('qrcode', repos = 'http://cran.rstudio.com')"
+
+## install qrcode
+RUN Rscript -e "install.packages('osmar', repos = 'http://cran.rstudio.com')"
