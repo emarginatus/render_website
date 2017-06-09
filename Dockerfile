@@ -38,5 +38,6 @@ RUN Rscript -e "install.packages('qrcode', repos = 'http://cran.rstudio.com')"
 
 ## install blogdown and dependecies
 RUN Rscript -e "devtools::install_github('rstudio/blogdown')" \
-  & Rscript -e "blogdown::install_hugo()"
+  && Rscript -e "blogdown::install_hugo()"
  
+CMD ["/bin/bash"]
