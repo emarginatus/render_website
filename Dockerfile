@@ -41,7 +41,7 @@ RUN Rscript -e "devtools::install_github('rstudio/blogdown')" \
   && Rscript -e "blogdown::install_hugo()"
 
 RUN apt-get update \
-  && apt-get -y ---no-install-recommends install \
+  && apt-get -y --no-install-recommends install \
     curl
 
 CMD ["/bin/bash"]
