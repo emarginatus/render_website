@@ -40,8 +40,12 @@ RUN Rscript -e "install.packages('qrcode', repos = 'http://cran.rstudio.com')"
 RUN Rscript -e "devtools::install_github('rstudio/blogdown')" \
   && Rscript -e "blogdown::install_hugo()"
 
+# install curl
 RUN apt-get update \
   && apt-get -y --no-install-recommends install \
     curl
+
+# install XML
+RUN Rscript -e "install.packages('XML', repos = 'http://cran.rstudio.com')"
 
 CMD ["/bin/bash"]
