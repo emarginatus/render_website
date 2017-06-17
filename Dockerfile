@@ -48,4 +48,7 @@ RUN apt-get update \
 # install XML
 RUN Rscript -e "install.packages('XML', repos = 'http://cran.rstudio.com')"
 
+# install INLA
+RUN Rscript -e 'install.packages("INLA", repos="https://inla.r-inla-download.org/R/stable")'
+
 CMD ["/bin/bash"]
