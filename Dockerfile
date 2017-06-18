@@ -51,4 +51,7 @@ RUN Rscript -e "install.packages('XML', repos = 'http://cran.rstudio.com')"
 # install INLA
 RUN Rscript -e 'install.packages("INLA", repos="https://inla.r-inla-download.org/R/stable")'
 
+# install plotROC
+RUN Rscript -e 'install.packages("plotROC", repos="http://cran.rstudio.com")'
+
 CMD ["/bin/bash"]
