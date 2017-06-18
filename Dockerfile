@@ -54,4 +54,10 @@ RUN Rscript -e 'install.packages("INLA", repos="https://inla.r-inla-download.org
 # install plotROC
 RUN Rscript -e 'install.packages("plotROC", repos="http://cran.rstudio.com")'
 
+# install mapview
+RUN apt-get update \
+  && apt-get -y --no-install-recommends install \
+    libudunits2-dev \
+  && Rscript -e "install.packages('mapview', repos = 'http://cran.rstudio.com')"
+
 CMD ["/bin/bash"]
