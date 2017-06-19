@@ -58,6 +58,7 @@ RUN Rscript -e 'install.packages("plotROC", repos="http://cran.rstudio.com")'
 RUN apt-get update \
   && apt-get -y --no-install-recommends install \
     libudunits2-dev \
-  && Rscript -e "install.packages('mapview', repos = 'http://cran.rstudio.com')"
+  && Rscript -e "install.packages('mapview', repos = 'http://cran.rstudio.com')" \
+  && Rscript -e "webshot::install_phantomjs()"
 
 CMD ["/bin/bash"]
