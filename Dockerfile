@@ -62,4 +62,7 @@ RUN apt-get update \
   && Rscript -e "install.packages('mapview', repos = 'http://cran.rstudio.com')" \
   && Rscript -e "webshot::install_phantomjs()"
 
+# install ggmap
+RUN Rscript -e 'install.packages("ggmap", repos="http://cran.rstudio.com")'
+
 CMD ["/bin/bash"]
