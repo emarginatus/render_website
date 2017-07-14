@@ -65,4 +65,10 @@ RUN apt-get update \
 # install ggmap
 RUN Rscript -e 'install.packages("ggmap", repos="http://cran.rstudio.com")'
 
+# install tuneR
+RUN Rscript -e 'install.packages("tuneR", repos="http://cran.rstudio.com")'
+
+# install signal
+RUN Rscript -e 'install.packages("signal", repos="http://cran.rstudio.com")'
+
 CMD ["/bin/bash"]
