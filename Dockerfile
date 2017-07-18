@@ -71,4 +71,13 @@ RUN Rscript -e 'install.packages("tuneR", repos="http://cran.rstudio.com")'
 # install signal
 RUN Rscript -e 'install.packages("signal", repos="http://cran.rstudio.com")'
 
+# install osmplotr
+RUN Rscript -e 'install.packages("osmplotr", repos="http://cran.rstudio.com")'
+
+# install lme4
+RUN Rscript -e 'install.packages("lme4", repos="http://cran.rstudio.com")'
+
+# install DT
+RUN Rscript -e 'install.packages("DT", repos="http://cran.rstudio.com")'
+
 CMD ["/bin/bash"]
