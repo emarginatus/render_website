@@ -80,4 +80,7 @@ RUN Rscript -e 'install.packages("lme4", repos="http://cran.rstudio.com")'
 # install DT
 RUN Rscript -e 'install.packages("DT", repos="http://cran.rstudio.com")'
 
+# install diagram
+RUN Rscript -e "install.packages('diagram', repos = 'http://cran.rstudio.com')"
+
 CMD ["/bin/bash"]
