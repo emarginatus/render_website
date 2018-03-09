@@ -7,6 +7,7 @@ MAINTAINER "Thierry Onkelinx" emarginatus@muscardinus.be
 RUN apt-get update \
   &&  apt-get -y --no-install-recommends install \
     libgdal-dev \
+    gdal-bin \
     libproj-dev \
   && Rscript -e "install.packages('rgdal', repos = 'http://cran.rstudio.com')"
 
